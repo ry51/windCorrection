@@ -17,7 +17,7 @@ function calculate() {
 		// Find the angle using arctan
 		let angle = Math.atan(y/x);
 		// Since atan only outputs between -pi/2 and pi/2, make sure that the other two halves are covered. At this point the angle should be between -pi/2 and 3pi/2
-		if (x < 0) angle += math.pi;
+		if (x < 0) angle += Math.PI;
 
 		// Convert the angle (currently in standard position) to bearing form in degrees, make it positive if necessary and map it into the range [0, 359]
 		angle = Math.round((-angle + Math.PI/2) * 180 / Math.PI + 360) % 360
